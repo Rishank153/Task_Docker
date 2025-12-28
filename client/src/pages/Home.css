@@ -1,0 +1,29 @@
+/* Home.css */
+.home-background {
+    background: url('/public/images/Home.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-y: auto;
+}
+
+.home-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* optional dim effect */
+    z-index: 0;
+}
+
+.home-overlay {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
